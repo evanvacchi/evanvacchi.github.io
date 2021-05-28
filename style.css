@@ -449,7 +449,7 @@ hr {
 }
 
 .contactForm{
-  max-width: 100px;
+  max-width: 50%;
   min-height: 60%;
   padding: 40px;
   background: #fff;
