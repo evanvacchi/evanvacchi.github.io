@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- to access test site -> python -m http.server 8000 in terminal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0"
+    <title>Evan Vacchiano</title>
+    <!-- connect css to html doc -->
+    <link rel='stylesheet' href='style.css'/>
+  </head>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Above import links in order (google fonts, bootstrap, font awesome for social media icons) -->
+
+  <body>
+    <!-- <div class='container-fluid'> -->
+      <!-- bootstrap class that makes content mobile responsive  -->
+    <nav id='navbar'>
+      <div class='nav_button'><a class='link' href='index.html'>HOME</a></div>
+      <div class='nav_button'><a class='link' href='projects.html'>PROJECTS</a></div>
+      <div class='nav_button'><a class='link' href='resume.html'>RESUME</a></div>
+      <div class='nav_button'><a class='link' href='contact.html'>CONTACT</a></div>
+    </nav>
+
+    <h1 id='h1_text'>ABOUT</h1>
+    <p class='main_info'>
+    <img id='evan_headshot' width="400" height="400" src='images/Evan_Vacchiano.jfif' alt='Evan Vacchiano Headshot'>
+    </p>
+
+    <!-- <div class='container'>
+    <i class="fa fa-angle-double-down"id='down_arrow' onclick='revealText()'></i>
+    </div> -->
+    <div class='container_text'>
+    <p id='hiddenText'class='main_info chunk'>
+      <em>Evan Vacchiano started his career working in the Entertainment industry after graduating from the University of Michigan in 2018.
+      He worked on several Television shows and Movies in Hollywood. Evan then moved to the representation space to work at a major Talent Agency in Beverly, Hills booking Actors and Comedians all around the world.
+      At the beginning of the COVID-19 pandemic, he quickly moved home to help his family when he found out his father had been diagnosed with an extremely rare case of two separate stage IV cancers. Evan essentially became his father's 24/7 caretaker, taking him to numerous appointments, chemos, radiations, and surgeries.
+      While waiting at his father's treatments, Evan decided to take online classes ranging from probability to finance to SQL databases and computer science to improve his skills and become a more well-rounded individual.
+      This website was built by himself from scratch after taking a web design course. Evan is now pursuing a career in business that incorporates his past Entertainment industry experience and his interests in emerging tech.
+      Some of his hobbies include: Golf, Soccer, Chess, Snowboarding, Running, and Stock Market Watching.
+    </em></p>
+    </div>
+    <div class="container">
+    <i class='fa fa-angle-double-up' id='up_arrow' style="display:none" onclick="hideText()"></i>
+  </div>
+
+  <hr class="hline" size='2px' width='100%' color='black'>
+  
+  <h1 id="subtext">SKILLS</h1>
+  <div class='container'>
+  <i class="fa fa-angle-double-down"id='down_arrow2' onclick='revealText2()'></i>
+  </div>
+  <div class='container_text2'>
+    <p style="display:none"><ul id='hiddenText2' style="display:none">
+      <li style="list-style-type: none;padding-bottom:10px;">LANGUAGES</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JAVASCRIPT</li>
+      <li>PYTHON</li>
+      <li id=libottom>SQL</li>
+    </ul></p>
+    <p>
+      <ul id="hiddenText3" style="display:none">
+        <li style="list-style-type:none; padding-bottom:10px;">LIBRARIES</li>
+        <li>PANDAS</li>
+        <li>NUMPY</li>
+        <li>SEABORN</li>
+        <li>FLASK</li>
+        <li id="libottom2">JQUERY</li>
+      </ul>
+    </p>
+    <p>
+      <ul id="hiddenText4" style="display:none">
+        <li style="list-style-type:none; padding-bottom:10px;">MISCELLANEOUS</li>
+        <li>GOOGLE DOCS</li>
+        <li>EXCEL</li>
+        <li>PREMIERE PRO</li>
+        <li>AUTOCAD</li>
+        <li id="libottom3">CINEMATOGRAPHY</li>
+      </ul>
+    </p>
+  </div>
+  <div class="container">
+  <i class='fa fa-angle-double-up' id='up_arrow2' style="display:none" onclick="hideText2()"></i>
+  </div>
+
+<!-- <hr id="hline2" class="hline" size='2px' width='100%' color='black'> -->
+<!-- <h1 id="subtext2">PROJECTS</h1>
+
+<div class='container'>
+<i class="fa fa-angle-double-down"id='down_arrow3' onclick='revealText3()'></i>
+</div>
+<div class="container_text2" id="hiddenText5" style="display:none"><p>
+  Below are a couple of my side projects. Currently, my Euchre Card Game app is in development and my database will be paired with the Euchre app to make it a full-stack application. These are not fully functional on my website right now, but feel free to ask me about them!</p>
+<br class="spacebelow"></br>
+<section class='my-work' id='work'>
+  <div class='portfolio'>
+
+        <a href='#' class='portfolio_item'>
+          <img class='portfolio_img' src='images/euchrelogo.png'/>
+        </a>
+
+        <a href='#' class='portfolio_item'>
+          <img class='portfolio_img' style="background:black;"src='images/db.png'/>
+        </a>
+
+        <a href='#' class='portfolio_item'>
+          <img class='portfolio_img'  />
+        </a>
+
+        <a href='#' class='portfolio_item'>
+          <img class='portfolio_img' />
+        </a>
+
+        <a href='#' class='portfolio_item'>
+          <img class='portfolio_img' />
+        </a>
+
+        <a href='#' class='portfolio_item'>
+          <img class='portfolio_img' />
+        </a>
+
+        <a href='#' class='portfolio_item'>
+          <img class='portfolio_img' />
+        </a>
+
+        <a href='#' class='portfolio_item'>
+          <img class='portfolio_img' />
+        </a>
+
+        <a href='#' class='portfolio_item'>
+          <img class='portfolio_img' />
+        </a>
+
+    </div>
+</section>
+
+</div>
+<div class="container">
+<i class='fa fa-angle-double-up' id='up_arrow3' style="display:none" onclick="hideText3()"></i>
+</div>
+
+<hr id="hline3" class="hline" size='2px' width='100%' color='black'>
+<h1 id="subtext3">RESUME</h1>
+
+<div class='container'>
+<i class="fa fa-angle-double-down"id='down_arrow4' onclick='revealText4()'></i>
+</div>
+<div class="container_text2" id="hiddenText6" style="display:none"><p>
+  Feel free to print, download, or share my resume.</p>
+
+<div id="fullwidth">
+<embed class='resume' src='Evan Vacchiano Resume 5-28-21 [W].pdf' width="100%" height="1000px" type='application/pdf'></embed>
+</div>
+</div>
+<div class="container">
+<i class='fa fa-angle-double-up' id='up_arrow4' style="display:none" onclick="hideText4()"></i>
+</div>
+
+<hr id="hline4" class="hline" size='2px' width='100%' color='black'>
+
+<h1 id="subtext4">CONTACT</h1>
+
+<div class='container'>
+<i class="fa fa-angle-double-down"id='down_arrow5' onclick='revealText5()'></i>
+</div>
+<div class="container_text2" id="hiddenText7" style="display:none"><p>
+Thank you for visiting my website. If you're interested in connecting with me please fill out the form below!</p>
+<section class='contact'>
+<div class='contactContainer'>
+<div class="contactForm">
+  <form id="myForm" action="/contact/formdata.html" method="post" enctype="multipart/form-data">
+    <h2>SEND MESSAGE</h2>
+    <div class="inputBox">
+      <input type="text" name="fname" required='required' maxlength="35" minlength='2' pattern="[A-Za-z ]+">
+      <span id="fname" for='fname'><em>Full Name</em></span>
+    </div>
+    <div class="inputBox">
+      <input type="text" name="email" required='required' type='email' pattern="[A-Za-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="35">
+      <span id='email' for='email' type='Email'><em>Email</em></span>
+    </div>
+    <div class="inputBox">
+      <textarea required='required' maxlength="750" name="textbox"></textarea>
+      <span id='textbox' for='textbox'><em>Type your Message...</em></span>
+    </div>
+    <div class="inputBox">
+      <div class="buttonHolder">
+      <input type="submit" name="" value='Send'>
+      </div>
+    </div>
+  <div><div>
+  </form>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div class="container">
+<i class='fa fa-angle-double-up' id='up_arrow5' style="display:none" onclick="hideText5()"></i>
+</div>
+
+<hr id="hline5" class="hline" size='2px' width='100%' color='black'>
+ -->
+
+  <div style="line-height:10px; background-color:red;"></div>
+    <footer id='bottom'>
+      <a href='https://www.linkedin.com/in/evan-vacchiano-93a935b0/' target='_blank' class='fa fa-linkedin'></a>
+      <a href='https://www.imdb.com/name/nm9187454/' target='_blank' class='fa fa-imdb'></a>
+      <a href='https://www.instagram.com/evanvacchiano/?hl=en' target='_blank' class="fa fa-instagram"></a>
+      <a href='https://open.spotify.com/user/1215939173' target='_blank' class='fa fa-spotify'></a>
+      <!-- <a href='mailto:evanvacchi@gmail.com' target='_blank' class='fa fa-envelope'></a> -->
+    </footer>
+  <!-- </div> -->
+  </body>
+  <script src='script.js'></script>
+</html>

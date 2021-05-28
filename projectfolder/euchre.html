@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Euchre</title>
+    <script src='deck.js' type="module"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- <div class="back-of-card"></div> -->
+    <div class="deck" id="deck"></div>
+    <button id="passbtn" type="button" class="pass" value="clickme">Pass</button>
+    <div id="cpu1">CPU1</div>
+    <div id="cp1slotcard1" class="cp1slotcard1 c1 t2"></div>
+    <div id="cp1slotcard2" class="cp1slotcard2 c1 t2"></div>
+    <div id="cp1slotcard3" class="cp1slotcard3 c1 t2"></div>
+    <div id="cp1slotcard4" class="cp1slotcard4 c1 t2"></div>
+    <div id="cp1slotcard5" class="cp1slotcard5 c1 t2"></div>
+
+    <div id="cpu2">CPU2</div>
+    <div id="cp2slotcard1" class="cp2slotcard1 c2 t1"></div>
+    <div id="cp2slotcard2" class="cp2slotcard2 c2 t1"></div>
+    <div id="cp2slotcard3" class="cp2slotcard3 c2 t1"></div>
+    <div id="cp2slotcard4" class="cp2slotcard4 c2 t1"></div>
+    <div id="cp2slotcard5" class="cp2slotcard5 c2 t1"></div>
+
+    <div id="cpu3">CPU3</div>
+    <div id="cp3slotcard1" class="cp3slotcard1 c3 t2"></div>
+    <div id="cp3slotcard2" class="cp3slotcard2 c3 t2"></div>
+    <div id="cp3slotcard3" class="cp3slotcard3 c3 t2"></div>
+    <div id="cp3slotcard4" class="cp3slotcard4 c3 t2"></div>
+    <div id="cp3slotcard5" class="cp3slotcard5 c3 t2"></div>
+
+    <div class="text"></div>
+
+    <div id="p1c1" class="player-card-slot1 p1"></div>
+    <div id="player-card-slot2" class="player-card-slot2 p1"></div>
+    <div id="player-card-slot3" class="player-card-slot3 p1"></div>
+    <div id="player-card-slot4" class="player-card-slot4 p1"></div>
+    <div id="player-card-slot5" class="player-card-slot5 p1"></div>
+
+    <div id="player1">Player</div>
+    <div id="score1">0</div>
+    <div id="score2">0</div>
+
+    <div class="trick1">
+      <h3>Team 1 Tricks</h3>
+      <div id="trick1score"></div>
+    </div>
+
+
+    <div class="trick2">
+      <h3>Team 2 Tricks</h3>
+      <div id="trick2score"></div>
+    </div>
+
+    <div class="box">
+      <button class="btn clubs">♣</button>
+      <button class="btn spades">♠</button>
+      <button class="btn hearts">♥</button>
+      <button class="btn diamonds">♦</button>
+    </div>
+
+
+  </body>
+</html>

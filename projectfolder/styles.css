@@ -1,0 +1,471 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(9, 4.2rem);
+  grid-template-rows: repeat(9, 4.2rem);
+  gap: 1rem;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: 1px solid black;
+  background:  darkgreen;
+}
+
+.box{
+  height: 100%;
+  width: 100%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 6;
+  grid-row-start: 9;
+  /* cursor: pointer; */
+  border-radius: .5rem;
+  border: 1px solid black;
+  user-select: none;
+  background: white;
+}
+
+.btn{
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.btn:hover{
+  /* opacity: .7; */
+  border: 1px solid black;
+}
+
+.clubs{
+  margin-top: 5px;
+  margin-left: 4px;
+}
+.spades{
+  margin-top: 5px;
+  margin-left: 4px;
+}
+.hearts{
+margin-top: 5px;
+margin-left: 5px;
+color: red;
+}
+.diamonds{
+margin-top: 5px;
+margin-left: 5px;
+color: red;
+}
+
+#passbtn{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 3;
+  grid-row-start: 9;
+  cursor: pointer;
+  border-radius: .5rem;
+  border: 1px solid black;
+  user-select: none;
+  background: white;
+}
+
+.pass:hover{
+  opacity: .85;
+}
+
+.deck{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 4;
+  grid-row-start: 9;
+  z-index: 1;
+}
+
+.deck:hover{
+  border: 1px solid yellow;
+  border-radius: .5rem;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+@keyframes border-pulsate {
+  0% {
+    border-color: rgba(255, 0, 0, 1);
+  }
+  50% {
+    border-color: rgba(255, 0, 0, 0);
+    transform: scale(1);
+  }
+  100% {
+    border-color: rgba(255, 0, 0, 1);
+    transform:scale(1.2);
+  }
+}
+
+.deck.selected{
+  border: 2px solid red;
+  border-radius: .5rem;
+  transform: scale(1.2);
+  cursor: pointer;
+  animation: border-pulsate 1.2s infinite;
+}
+
+.deck.back-of-card{
+  height: 100%;
+  width: 100%;
+  grid-column-start: 4;
+  grid-row-start: 9;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  user-select: none;
+  background: red;
+  z-index: 3;
+}
+
+
+.text {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding-left: 3px;
+}
+
+#player1{
+  grid-column-start: 5;
+  grid-row-start: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.player-card-slot1, .player-card-slot2, .player-card-slot3,
+.player-card-slot4, .player-card-slot5 {
+  grid-column-start: 3;
+  grid-row-start: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+
+.player-card-slot1:hover, .player-card-slot2:hover, .player-card-slot3:hover,
+.player-card-slot4:hover, .player-card-slot5:hover {
+  border: 1px solid yellow;
+  border-radius: .5rem;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.player-card-slot2{
+  grid-column-start: 4;
+  grid-row-start: 8;
+}
+
+.player-card-slot3{
+  grid-column-start: 5;
+  grid-row-start: 8;
+}
+
+.player-card-slot4{
+  grid-column-start: 6;
+  grid-row-start: 8;
+}
+
+.player-card-slot5{
+  grid-column-start: 7;
+  grid-row-start: 8;
+}
+
+@keyframes cborder-pulsate {
+  0% {
+    border-color: rgba(240, 255, 0, 1);
+  }
+  50% {
+    border-color: rgba(240, 255, 0, 0);
+    transform: scale(1);
+  }
+  100% {
+    border-color: rgba(240, 255, 0, 1);
+    transform:scale(1.1);
+  }
+}
+
+.player-card-slot1.cselected, .player-card-slot2.cselected, .player-card-slot3.cselected,
+.player-card-slot4.cselected, .player-card-slot5.cselected{
+  border: 2px solid yellow;
+  border-radius: .5rem;
+  transform: scale(1.2);
+  cursor: pointer;
+  animation: cborder-pulsate 1.2s infinite;
+}
+
+.player-card-slot1.disabled, .player-card-slot2.disabled, .player-card-slot3.disabled,
+.player-card-slot4.disabled, .player-card-slot5.disabled{
+  pointer-events: none;
+}
+
+.disabled{
+  pointer-events: none;
+}
+
+
+
+#cpu1 {
+  grid-column-start: 1;
+  grid-row-start: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.cp1slotcard1, .cp1slotcard2, .cp1slotcard3, .cp1slotcard4, .cp1slotcard5{
+  grid-column-start: 2;
+  grid-row-start: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cp1slotcard1{
+  grid-column-start: 2;
+  grid-row-start: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cp1slotcard2{
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+
+.cp1slotcard3{
+  grid-column-start: 2;
+  grid-row-start: 5;
+}
+
+.cp1slotcard4{
+  grid-column-start: 2;
+  grid-row-start: 6;
+}
+
+.cp1slotcard5{
+  grid-column-start: 2;
+  grid-row-start: 7;
+}
+
+
+#cpu2 {
+  grid-column-start: 5;
+  grid-row-start: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.cp2slotcard1, .cp2slotcard2, .cp2slotcard3, .cp2slotcard4, .cp2slotcard5{
+  grid-column-start: 3;
+  grid-row-start: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cp2slotcard2{
+  grid-column-start: 4;
+  grid-row-start: 2;
+}
+
+.cp2slotcard3{
+  grid-column-start: 5;
+  grid-row-start: 2;
+}
+
+.cp2slotcard4{
+  grid-column-start: 6;
+  grid-row-start: 2;
+}
+
+.cp2slotcard5{
+  grid-column-start: 7;
+  grid-row-start: 2;
+}
+
+#cpu3 {
+  grid-column-start: 9;
+  grid-row-start: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.cp3slotcard1, .cp3slotcard2, .cp3slotcard3, .cp3slotcard4, .cp3slotcard5{
+  grid-column-start: 8;
+  grid-row-start: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cp3slotcard2{
+  grid-column-start: 8;
+  grid-row-start: 4;
+}
+
+.cp3slotcard3{
+  grid-column-start: 8;
+  grid-row-start: 5;
+}
+
+.cp3slotcard4{
+  grid-column-start: 8;
+  grid-row-start: 6;
+}
+
+.cp3slotcard5{
+  grid-column-start: 8;
+  grid-row-start: 7;
+}
+
+.card{
+position: relative;
+height: 100%;
+width: 100%;
+border: 1px solid black;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+border-radius: .5rem;
+user-select: none;
+background: white;
+}
+
+#score1, #score2{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  user-select: none;
+  background: white;
+}
+
+#score1{
+  grid-column-start: 8;
+  grid-row-end: 10;
+}
+
+#score2 {
+  grid-column-start: 1;
+  grid-row-end: 0;
+}
+
+.trick1, .trick2 {
+  /* white-space: pre; */
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+  user-select: none;
+  background: white;
+  font-size: 50%;
+  /* overflow: hidden; */
+  white-space: nowrap;
+  /* padding-top: 2px; */
+}
+
+h3 {
+  padding-left: 2px;
+  overflow: auto;
+}
+
+#trick1score, #trick2score{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  padding-bottom: 10px;
+
+
+}
+
+.trick1 {
+  grid-column-start: 9;
+  grid-row-end: 10;
+}
+
+.trick2 {
+  grid-column-start: 2;
+  grid-row-end: 0;
+}
+
+.back-of-card{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: .5rem;
+  user-select: none;
+  background: red;
+}
+
+.card.red{
+  color:red;
+}
+
+.card.black{
+  color: black;
+}
+
+.card::before,
+.card::after{
+position: absolute;
+content: attr(data-value);
+font-size: .75rem;
+}
+
+.card::before{
+top: .2rem;
+left: .2rem;
+}
+
+.card::after{
+  bottom: .2rem;
+  right: .2rem;
+  transform: rotate(180deg);
+}

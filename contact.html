@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- to access test site -> python -m http.server 8000 in terminal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta name='viewport' content="width=device-width, initial-scale=1.0"charset="utf-8">
+    <title>Evan Vacchiano</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/> -->
+    <link rel='stylesheet' href='style.css'/>
+  </head>
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <body>
+    <nav id='navbar'>
+      <div class='nav_button'><a class='link' href='index.html'>HOME</a></div>
+      <div class='nav_button'><a class='link' href='projects.html'>PROJECTS</a></div>
+      <div class='nav_button'><a class='link' href='resume.html'>RESUME</a></div>
+      <div class='nav_button'><a class='link' href='contact.html'>CONTACT</a></div>
+    </nav>
+
+
+      <div>
+        <h1 id="h1_text" style="color:black;">CONTACT ME</h1>
+        <p class="main_info" style="color:black;">Thank you for visiting my website. If you're interested in connecting with me please fill out the form below!</p>
+      </div>
+      <section class='contact'>
+      <div class='contactContainer'>
+      <div class="contactForm">
+        <form id="myForm" action="/contact/formdata.html" method="post" enctype="multipart/form-data">
+          <h2>SEND MESSAGE</h2>
+          <div class="inputBox">
+            <input type="text" name="fname" required='required' maxlength="35" minlength='2' pattern="[A-Za-z ]+">
+            <span id="fname" for='fname'><em>Full Name</em></span>
+          </div>
+          <div class="inputBox">
+            <input type="text" name="email" required='required' type='email' pattern="[A-Za-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="35">
+            <span id='email' for='email' type='Email'><em>Email</em></span>
+          </div>
+          <div class="inputBox">
+            <textarea required='required' maxlength="750" name="textbox"></textarea>
+            <span id='textbox' for='textbox'><em>Type your Message...</em></span>
+          </div>
+          <div class="inputBox">
+            <div class="buttonHolder">
+            <input type="submit" name="" value='Send'>
+            </div>
+          </div>
+        <div><div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+    <footer id='bottom'>
+      <a href='https://www.linkedin.com/in/evan-vacchiano-93a935b0/' target='_blank' class='fa fa-linkedin'></a>
+      <a href='https://www.imdb.com/name/nm9187454/' target='_blank' class='fa fa-imdb'></a>
+      <a href='https://www.instagram.com/evanvacchiano/?hl=en' target='_blank' class="fa fa-instagram"></a>
+      <a href='https://open.spotify.com/user/1215939173' target='_blank' class='fa fa-spotify'></a>
+    </footer>
+  </body>
+  <script src='script.js'></script>
+</html>
