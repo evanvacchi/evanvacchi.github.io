@@ -1,3 +1,4 @@
+
 body {
   background-image: url('images/bg1.jpg');
   background-repeat: repeat;
@@ -338,10 +339,17 @@ li {
   background: black;
   color: #1DB954
 }
+
 .fa-angle-double-down, .fa-angle-double-up{
   text-align: center;
   color:black;
 }
+
+.fa-github{
+  color: white;
+  /* background: white; */
+}
+
 #bottom{
   display: flex;
   width:100%;
@@ -532,4 +540,12 @@ hr {
   .contactContainer .contactInfo .contactForm {
     width: 100%
   }
-} */
+} put a comma in for OR statements and keyword works for AND statements. all is default behavior so i could just say @media (max-width: 500px)*/
+@media all and (max-width: 500px) {
+
+
+}
+
+@media (orientation: landscape) {
+
+}
