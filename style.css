@@ -111,7 +111,7 @@ body {
   cursor: pointer;
 }
 .main_info{
-  text-align: center;
+  text-align: left;
   display: block;
   position: relative;
   /* font-family: 'Helvetica', 'Arial', sans-serif; */
@@ -119,6 +119,7 @@ body {
   font-size: 20px;
   z-index: -1;
 }
+
 #hiddenText {
   display: flex;
   width: 80vw;
@@ -304,9 +305,27 @@ li {
   max-height: 235px;
   width: auto;
   height: auto;
-  border-radius: 50%;
-  padding-left: 15px;
+  /* align-items: center; */
+  /* border-radius: 50%; */
+  /* padding-left: 15px; */
 }
+.cropped {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  display: block;
+}
+
+#check{
+  display: flex;
+  justify-content: center;
+  /* background: yellow; */
+}
+
 .fa{
   padding: 7px;
   font-size: 30px;
@@ -366,7 +385,7 @@ li {
 
 .chunk{
   border: 3px solid;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 #textbox{
